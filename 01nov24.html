@@ -11,16 +11,17 @@
   let rul = document.getElementById("rul");
   let angle = 0;
   function rotateRul(){//вращает колесо
-angle +=2;
-rul.style.transform = "rotate("+ angle +"deg)"
-}
+    angle +=0.01;
+    rul.style.transform = "rotate("+ angle +"deg)"
+    }
 let timer;
 function startRul(){//вызывается при нажатии кнопки "ВРАЩАТЬ"
-timer = SetInterval(rotateRul, 1);
-}
-function startRul(){//вызывается при нажатии кнопки "СТОП"
-clearInterval(timer)
-}
+
+    timer = setInterval(rotateRul, 1);
+    }
+function stopRul(){//вызывается при нажатии кнопки "СТОП"
+    clearInterval(timer)
+    }
 </script>
 </body>
 </html>
